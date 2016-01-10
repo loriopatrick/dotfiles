@@ -1,3 +1,4 @@
+sudo pacman -S vim
 sudo pacman -S git
 yaourt -S spotify
 yaourt -S playerctl
