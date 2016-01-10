@@ -1,0 +1,18 @@
+[color]
+	ui = true
+[push]
+	default = simple
+[user]
+	name = Patrick Lorio
+	email = patrick@lorio.me
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = mvim-diff.sh $LOCAL $REMOTE
+[merge]
+	tool = gvimdiff
+	conflictstyle = diff3
