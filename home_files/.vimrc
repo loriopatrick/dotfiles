@@ -71,10 +71,6 @@ set hlsearch
 set incsearch
 set smartcase
 
-" Allow mouse
-set mouse=a
-set ttymouse=xterm2
-
 set so=5 " keep cursor 5 lines in window
 
 set foldmethod=syntax foldlevel=999999 " set fold mode
@@ -124,6 +120,3 @@ nnoremap <S-Tab> $
 " Enable spell check
 noremap <C-s> :set spell!<CR>
 set spelllang=en_us
-
-" Open fuzzy file search
-noremap <S-t> :CtrlP<CR>
