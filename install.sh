@@ -7,6 +7,7 @@ for i in $(ls $LOC/home_files -A); do
 done;
 
 xrdb -load $HOME/.Xresources
+xmodmap $HOME/.Xmodmap
 
 if [ ! -d $HOME/.vim/bundle/Vundle.vim ]; then
     git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim

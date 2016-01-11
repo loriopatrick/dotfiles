@@ -88,6 +88,7 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+set $workspace5 "5: Idea"
 set $workspace10 "10: Music"
 
 # switch to workspace
@@ -95,7 +96,7 @@ bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
+bindsym $mod+5 workspace $workspace5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -107,7 +108,7 @@ bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
 bindsym $mod+Shift+3 move container to workspace 3
 bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+5 move container to workspace $workspace5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -142,6 +143,11 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
+mode "i" {
+    bindsym $mod+Shift+i mode "default"
+}
+
+bindsym $mod+Shift+i mode "i"
 bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -152,6 +158,7 @@ bar {
 }
 
 for_window [class="Spotify"] move to workspace $workspace10
+for_window [class="jetbrains-idea"] move to workspace $workspace5
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 10%+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 10%-
@@ -162,3 +169,5 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 exec_always feh --bg-fill $HOME/Wallpaper.jpg
+
+exec ntpdate -s time.nist.gov
