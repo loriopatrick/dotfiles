@@ -21,3 +21,5 @@ export EDITOR=vim
 export BROWSER=chromium
 
 alias ls='ls --color=auto'
+export TERMINAL=xterm
+export TERM=xterm-256color

@@ -10,18 +10,14 @@ Plugin 'bling/vim-airline' " cool status bar
 Plugin 'airblade/vim-gitgutter' " git file changes
 Plugin 'scrooloose/nerdtree' " file explorer
 Plugin 'editorconfig/editorconfig-vim' " linting
-Plugin 'Raimondi/delimitMate' " auto close brackets
-Plugin 'kien/ctrlp.vim' " fuzzy search
 
 " Lang Support
 Plugin 'pangloss/vim-javascript'
 Plugin 'groenewege/vim-less'
-Plugin 'mxw/vim-jsx'
-Plugin 'vim-scripts/cool.vim'
 Plugin 'JuliaLang/julia-vim'
 Plugin 'vim-scripts/psql.vim'
-Plugin 'vim-scripts/cup.vim'
 Plugin 'udalov/kotlin-vim'
+Plugin 'wting/rust.vim'
 
 " Colors
 Plugin 'vim-scripts/summerfruit256.vim'
@@ -55,7 +51,7 @@ set ttyfast
 set lazyredraw
 
 " set theme
-colorscheme PaperColor
+colorscheme gruvbox
 set background=dark
 
 " fix tab and backspace
@@ -79,16 +75,16 @@ set foldmethod=syntax foldlevel=999999 " set fold mode
 nmap <C-p> :NERDTreeToggle<CR>
 
 " Change split with arrow keys
-nmap <silent> <Up> :wincmd k<CR>
-nmap <silent> <Down> :wincmd j<CR>
-nmap <silent> <Left> :wincmd h<CR>
-nmap <silent> <Right> :wincmd l<CR>
+nmap <silent> <C-h> :wincmd k<CR>
+nmap <silent> <C-l> :wincmd j<CR>
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-l> :wincmd l<CR>
 
-" Change tab with shift arrow keys
-nmap <silent> <S-Left> :tabp<CR>
-nmap <silent> <S-Right> :tabn<CR>
-imap <silent> <S-Left> <ESC>:tabp<CR>
-imap <silent> <S-Right> <ESC>:tabn<CR>
+" Change tab
+nmap <silent> <C-h> :tabp<CR>
+nmap <silent> <C-l> :tabn<CR>
+imap <silent> <C-h> <ESC>:tabp<CR>
+imap <silent> <C-l> <ESC>:tabn<CR>
 
 " Resize window commands
 nnoremap <silent> + :exe "resize " . (winheight(0) * 8/7)<CR>
@@ -105,18 +101,20 @@ nmap <S-w> :q<CR>
 nmap <silent> <S-m> :nohl<CR>
 
 " Move quickly
-nnoremap <S-j> jjjj
-nnoremap <S-k> kkkk
-nnoremap <S-l> $
-vnoremap <S-h> ^
-vnoremap <S-l> $
-nnoremap <S-h> ^
-nnoremap <silent> <C-r> :so $MYVIMRC<CR>
+nmap <S-j> jjjj
+nmap <S-k> kkkk
+vmap <S-j> jjjj
+vmap <S-k> kkkk
+nmap <S-l> $
+vmap <S-h> ^
+vmap <S-l> $
+nmap <S-h> ^
+nmap <silent> <C-r> :so $MYVIMRC<CR>
 
 " Go to end of line
 inoremap <S-Tab> <Esc><S-a>
 nnoremap <S-Tab> $
 
 " Enable spell check
-noremap <C-s> :set spell!<CR>
-set spelllang=en_us
+" noremap <C-s> :set spell!<CR>
+" set spelllang=en_us
