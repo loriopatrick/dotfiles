@@ -20,6 +20,6 @@ alias gil="git log --decorate --graph --oneline"
 export EDITOR=vim
 export BROWSER=chromium
 
-alias ls='ls --color=auto'
+alias ls='ls -G'
 export TERMINAL=xterm
 export TERM=xterm-256color
