@@ -29,6 +29,8 @@ Plugin 'vim-scripts/moria'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" Speed up regex
+set re=1
 
 " Plugin Configs
 let delimitMate_expand_cr = 1
