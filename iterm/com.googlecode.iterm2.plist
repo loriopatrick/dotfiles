@@ -196,7 +196,7 @@
 	<key>HideMenuBarInFullscreen</key>
 	<true/>
 	<key>HideScrollbar</key>
-	<false/>
+	<true/>
 	<key>HideTab</key>
 	<true/>
 	<key>HighlightTabLabels</key>
@@ -225,17 +225,17 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
-	<key>NSFontPanelAttributes</key>
-	<string>1, 0</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Dropbox (Personal)/iterm</string>
+	<string>~/dotfiles/iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 448}</string>
+	<string>{712, 459}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
 	<string></string>
 	<key>NSScrollAnimationEnabled</key>
+	<false/>
+	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
 	<key>NSTableView Columns KeyBingingTable</key>
 	<array>
@@ -248,48 +248,25 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>302</string>
+		<string>307</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
-	<key>NSToolbar Configuration Terminal Toolbar</key>
-	<dict>
-		<key>TB Display Mode</key>
-		<integer>3</integer>
-		<key>TB Icon Size Mode</key>
-		<integer>1</integer>
-		<key>TB Is Shown</key>
-		<integer>0</integer>
-		<key>TB Size Mode</key>
-		<integer>1</integer>
-	</dict>
 	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
 	<dict>
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
-	<key>NSWindow Frame NSColorPanel</key>
-	<string>136 134 231 329 0 0 1280 777 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>102 242 931 357 0 0 1280 800 </string>
+	<string>1033 478 671 187 0 0 1920 1057 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>356 278 924 485 0 0 1280 800 </string>
+	<string>2418 574 606 456 1920 0 1920 1057 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>916 685 384 129 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1280 0 1915 1057 1280 0 1920 1057 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1924 679 585 401 1280 0 1920 1080 </string>
-	<key>NSWindow Frame iTerm Window 2</key>
-	<string>4 26 1060 746 0 0 1280 777 </string>
-	<key>NSWindow Frame iTerm Window 3</key>
-	<string>301 895 1431 712 -461 800 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 4</key>
-	<string>1655 729 570 426 1280 378 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 5</key>
-	<string>2466 716 892 698 1280 378 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 6</key>
-	<string>131 94 570 426 0 0 1280 777 </string>
+	<string>4 0 1913 1057 0 0 1920 1057 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -839,11 +816,11 @@
 			<key>Name</key>
 			<string>Main</string>
 			<key>Non Ascii Font</key>
-			<string>SauceCodePowerline-Regular 9</string>
+			<string>SauceCodePowerline-Regular 13</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SauceCodePowerline-Regular 11</string>
+			<string>SauceCodePowerline-Regular 13</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1018,12 +995,14 @@
 			<string>/Users/plorio</string>
 		</dict>
 	</array>
-	<key>NoSyncHaveShownPromoWithId_4</key>
-	<true/>
+	<key>NoSyncInstallationId</key>
+	<string>85AB036A-1627-407E-AB77-655681F7C2C6</string>
+	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
+	<real>486713767.74663401</real>
 	<key>NoSyncTimeOfLastPromo</key>
-	<real>478050889.12108803</real>
+	<real>486106651.08278102</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>486080327.93620801</real>
+	<real>486317755.10479403</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1072,7 +1051,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/plorio/Dropbox (Personal)/iterm</string>
+	<string>/Users/plorio/dotfiles/iterm</string>
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -1083,12 +1062,14 @@
 	<integer>3</integer>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
+	<key>SUFeedAlternateAppNameKey</key>
+	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=88</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-05-26T23:35:07Z</date>
+	<date>2016-06-05T06:52:16Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1100,11 +1081,13 @@
 	<key>SmartPlacement</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.47091847658157349</real>
+	<real>0.34777143429487178</real>
 	<key>SwitchTabModifier</key>
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
 	<integer>6</integer>
+	<key>TabStyle</key>
+	<integer>1</integer>
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>ThreeFingerEmulates</key>
@@ -1136,6 +1119,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.1.4</string>
+	<string>3.0.0</string>
 </dict>
 </plist>

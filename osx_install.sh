@@ -11,3 +11,5 @@ brew install vim
 brew install git
 brew install node
 brew install rust
+brew install watchman
+brew install wget
