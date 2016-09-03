@@ -25,3 +25,5 @@ export TERMINAL=xterm
 export TERM=xterm-256color
 
 export ANDROID_HOME=/Users/plorio/Library/Android/sdk
+
+alias vim=nvim

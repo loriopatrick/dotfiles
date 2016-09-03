@@ -1,33 +1,34 @@
-set nocompatible  " be iMproved, required
 set hidden
 filetype off " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'bling/vim-airline' " cool status bar
-Plugin 'airblade/vim-gitgutter' " git file changes
-Plugin 'scrooloose/nerdtree' " file explorer
-Plugin 'editorconfig/editorconfig-vim' " linting
+Plug 'bling/vim-airline' " cool status bar
+Plug 'airblade/vim-gitgutter' " git file changes
+Plug 'scrooloose/nerdtree' " file explorer
+Plug 'editorconfig/editorconfig-vim' " linting
 
 " Lang Support
-Plugin 'pangloss/vim-javascript'
-Plugin 'groenewege/vim-less'
-Plugin 'JuliaLang/julia-vim'
-Plugin 'vim-scripts/psql.vim'
-Plugin 'udalov/kotlin-vim'
-Plugin 'wting/rust.vim'
+Plug 'othree/yajs.vim'
+Plug 'groenewege/vim-less'
+Plug 'JuliaLang/julia-vim'
+Plug 'exu/pgsql.vim'
+Plug 'udalov/kotlin-vim'
+Plug 'wting/rust.vim'
 
 " Colors
-Plugin 'vim-scripts/summerfruit256.vim'
-Plugin 'NLKNguyen/papercolor-theme'
-Plugin 'morhetz/gruvbox'
-Plugin 'vim-scripts/darktango.vim'
-Plugin 'vim-scripts/moria'
+Plug 'vim-scripts/summerfruit256.vim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'morhetz/gruvbox'
+Plug 'vim-scripts/darktango.vim'
+Plug 'vim-scripts/moria'
 
-call vundle#end()            " required
+call plug#end()
 filetype plugin indent on    " required
+
+" Enable postgres highlighting on .sql
+let g:sql_type_default = 'pgsql'
 
 " Speed up regex
 set re=1
@@ -39,6 +40,9 @@ let g:airline_powerline_fonts = 1 " use nice fonts for airline
 
 autocmd FileType sql :let b:vimpipe_command="psql mydatabase"
 autocmd FileType sql :let b:vimpipe_filetype="postgresql"
+
+" Share clipboard between instances
+set clipboard=unnamedplus
 
 " No more swap and back files
 set nobackup
@@ -88,11 +92,9 @@ set foldmethod=syntax foldlevel=999999 " set fold mode
 " Open NERDTREE
 nmap <C-p> :NERDTreeToggle<CR>
 
-" Change split with arrow keys
-nmap <silent> <C-h> :wincmd k<CR>
-nmap <silent> <C-l> :wincmd j<CR>
-nmap <silent> <C-h> :wincmd h<CR>
-nmap <silent> <C-l> :wincmd l<CR>
+if has('nvim')
+    nmap <BS> <C-W>h
+endif
 
 " Change tab
 nmap <silent> <C-h> :tabp<CR>
